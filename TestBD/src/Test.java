@@ -6,7 +6,7 @@ import java.sql.Statement;
 /**
  * Created by Admin on 04.12.2016.
  */
-//в проектах лучше всего создавать отдельный класс с методами инсерт, селект и тд. и наследоваться от него для работы с базой
+//РІ РїСЂРѕРµРєС‚Р°С… Р»СѓС‡С€Рµ РІСЃРµРіРѕ СЃРѕР·РґР°РІР°С‚СЊ РѕС‚РґРµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ СЃ РјРµС‚РѕРґР°РјРё РёРЅСЃРµСЂС‚, СЃРµР»РµРєС‚ Рё С‚Рґ. Рё РЅР°СЃР»РµРґРѕРІР°С‚СЊСЃСЏ РѕС‚ РЅРµРіРѕ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·РѕР№
 
 public class Test {
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class Test {
             Statement select = con.createStatement();
             ResultSet resultSet = select.executeQuery("select * from models");
             while(resultSet.next()){
-                int key = resultSet.getInt("id_model");//номер или имя столюца
+                int key = resultSet.getInt("id_model");//РЅРѕРјРµСЂ РёР»Рё РёРјСЏ СЃС‚РѕР»СЋС†Р°
                 String val = resultSet.getString("model_name");
                 System.out.println("key = "+key);
                 System.out.println("val = "+val);
@@ -35,7 +35,7 @@ public class Test {
         {
             e.printStackTrace();
         }
-        //закрываем соединение с бд
+        //Р·Р°РєСЂС‹РІР°РµРј СЃРѕРµРґРёРЅРµРЅРёРµ СЃ Р±Рґ
         finally {
             if (con!=null){
                 try {
